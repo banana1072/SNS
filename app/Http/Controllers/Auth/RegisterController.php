@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\MessageBag;
 
 class RegisterController extends Controller
 {
@@ -51,8 +52,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'username' => 'required|string|max:255',
             'mail' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:4|confirmed',
-            'password-confirm' => 'required',
+            'password' => 'required|string|min:4|confirmed'
         ]);
     }
 
@@ -79,9 +79,30 @@ class RegisterController extends Controller
     public function register(Request $request){
         if($request->isMethod('post')){
             $data = $request->input();
-            $this->validator($data);
+
+            $rulus = [
+                'username' => 'required|string|max:255',
+                'mail' => 'required|string|email|max:255|unique:users',
+                'password' => 'required|string|min:4|confirmed',
+                'password_confirmation' => 'required'
+            ];
+
+            $message = [
+                'username' => '名前を入力してください',
+                'mail' => 'メールアドレスを入力してください',
+                'password' => '４文字以上で入力してください',
+                'password-confirm' => 'パスワードが一致しません',
+            ];
+
+            $validator = Validator::make($request->all(),$rulus,$message);
+            if ($validator->fails()) {
+                $msg = $validator;
+                    return redirect('/register')
+                    ->withErrors($validator)
+                    ->withInput();
+            }
             $this->create($data);
-            return redirect('added');
+            return view('auth.added',$data);
         }
         return view('auth.register');
     }
