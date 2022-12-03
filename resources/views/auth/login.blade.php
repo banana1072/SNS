@@ -2,7 +2,7 @@
 
 @section('content')
 
-{!! Form::open() !!}
+{!! Form::open(['action' => 'Auth\LoginController@login']) !!}
 
 <p>AtlasSNSへようこそ</p>
 

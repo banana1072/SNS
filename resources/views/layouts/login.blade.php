@@ -18,19 +18,30 @@
     <!--iphoneのアプリアイコン指定-->
     <link rel="apple-touch-icon-precomposed" href="画像のURL" />
     <!--OGPタグ/twitterカード-->
+    <link href="https://use.fontawesome.com/releases/v6.2.1/css/all.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <header>
         <div id = "head">
-        <h1><a><img src="images/logo.png"></a></h1>
-            <div id="">
-                <div id="">
-                    <p>〇〇さん<img src="images/arrow.png"></p>
+        <h1>
+            <a href="{{url('top')}}">
+                <img src="{{ asset('images/Atlas.png')}}">
+            </a>
+        </h1>
+            <div id="head-right">
+                <div id="head-right-name">
+                    <p>
+                        {{ session('username')}}さん
+                        <i class="fa-solid fa-angle-down"></i>
+                        <img src="{{asset('images/icon1.png')}}">
+                    </p>
                 <div>
-                <ul>
-                    <li><a href="/top">ホーム</a></li>
-                    <li><a href="/profile">プロフィール</a></li>
-                    <li><a href="/logout">ログアウト</a></li>
+                <ul class="usermenu">
+                    <li><a href="{{url('top')}}">ホーム</a></li>
+                    <li><a href="{{url('profile')}}">プロフィール</a></li>
+                    <li><a href="{{url('logout')}}">ログアウト</a></li>
                 </ul>
             </div>
         </div>
@@ -41,7 +52,7 @@
         </div >
         <div id="side-bar">
             <div id="confirm">
-                <p>〇〇さんの</p>
+                <p>{{session('username')}}さんの</p>
                 <div>
                 <p>フォロー数</p>
                 <p>〇〇名</p>
@@ -58,7 +69,7 @@
     </div>
     <footer>
     </footer>
-    <script src="JavaScriptファイルのURL"></script>
+    <script src="{{ asset('js/login.js') }}"></script>
     <script src="JavaScriptファイルのURL"></script>
 </body>
 </html>

@@ -7,7 +7,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
-use Illuminate\Support\MessageBag;
 
 class RegisterController extends Controller
 {
@@ -102,7 +101,9 @@ class RegisterController extends Controller
                     ->withInput();
             }
             $this->create($data);
-            return view('auth.added',$data);
+            $user = $request->get('username');
+            return redirect('added')->with('username', $user);
+
         }
         return view('auth.register');
     }

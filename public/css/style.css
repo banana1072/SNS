@@ -1,22 +1,93 @@
 @charset "utf-8";
-html{
-}
-body{
-}
-/* header */
-header{
-    background:#186AC9;
+html {
+    font-size: 16px;
 }
 
+body {}
+
+
+/* header */
+
+header {
+    background: #186AC9;
+}
+
+
 /* main content */
-#row{
+
+#row {
     display: flex;
     flex-flow: row wrap;
+    z-index: 1;
 }
-#container{
+
+#container {
     flex: 0 0 80%;
 }
-#side-bar{
+
+#side-bar {
     flex: 0 0 19%;
     border-left: 1px solid #727272;
+}
+
+#head {
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    height: 112px;
+}
+
+#head-right {
+    height: 112px;
+    padding-right: 30px;
+}
+
+#head-right-name {
+    height: 112px;
+    cursor: pointer;
+}
+
+#head-right-name p {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 112px;
+}
+
+.fa-solid {
+    display: inline-block;
+    margin: 0 30px;
+}
+
+.usermenu {
+    /* display: none; */
+    text-decoration: none;
+    border: 1px solid black;
+    z-index: 10;
+    text-align: center;
+    display: none;
+    position: absolute;
+    right: 0px;
+}
+
+.usermenu li {
+    border: 1px solid black;
+    background-color: white;
+}
+
+.usermenu li:nth-child(2) {
+    background-color: #186AC9;
+}
+
+.usermenu li a {
+    font-size: 1.8rem;
+    display: inline-block;
+    padding: 30px 80px;
+    color: gray;
+}
+
+.usermenu li:nth-child(2) a {
+    color: white;
 }

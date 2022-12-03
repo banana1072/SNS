@@ -13,4 +13,7 @@ class UsersController extends Controller
     public function search(){
         return view('users.search');
     }
+    public function logout(){
+        return view('auth.login');
+    }
 }
