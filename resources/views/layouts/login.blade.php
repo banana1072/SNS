@@ -32,7 +32,7 @@
             <div id="head-right">
                 <div id="head-right-name">
                     <p>
-                        {{ session('username')}}さん
+                        <?php $user = Auth::user(); ?>{{ $user->username }}さん
                         <i class="fa-solid fa-angle-down"></i>
                         <img src="{{asset('images/icon1.png')}}">
                     </p>
@@ -51,7 +51,7 @@
         </div >
         <div id="side-bar">
             <div id="confirm">
-                <p>{{session('username')}}さんの</p>
+                <p>{{$user->username}}さんの</p>
                 <div>
                 <p>フォロー数</p>
                 <p>〇〇名</p>
