@@ -37,28 +37,30 @@
                 }
             }
             .btn {
+                a {
+                    color: white;
+                    display: block;
+                    padding: 15px 25px;
+                    background-color: rgb(7, 86, 207);
+                    text-align: center;
+                    border-radius: 8px;
+                    width: 150px;
+                    position: relative;
+                    left: 100px;
+                }
+            }
+        }
+        .search_btn {
+            a {
+                color: white;
+                display: block;
                 padding: 15px 25px;
                 background-color: rgb(7, 86, 207);
                 text-align: center;
                 border-radius: 8px;
                 width: 150px;
-                position: relative;
-                left: 100px;
-                a {
-                    color: white;
-                }
-            }
-        }
-        .search_btn {
-            padding: 15px 25px;
-            background-color: rgb(7, 86, 207);
-            text-align: center;
-            border-radius: 8px;
-            width: 150px;
-            margin: 0 auto;
-            margin-top: 40px;
-            a {
-                color: white;
+                margin: 0 auto;
+                margin-top: 40px;
             }
         }
     }

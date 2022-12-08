@@ -34,7 +34,9 @@
 #side-bar #confirm .followed .followed_num {
   margin-right: 30px;
 }
-#side-bar #confirm .btn {
+#side-bar #confirm .btn a {
+  color: white;
+  display: block;
   padding: 15px 25px;
   background-color: rgb(7, 86, 207);
   text-align: center;
@@ -43,10 +45,9 @@
   position: relative;
   left: 100px;
 }
-#side-bar #confirm .btn a {
+#side-bar .search_btn a {
   color: white;
-}
-#side-bar .search_btn {
+  display: block;
   padding: 15px 25px;
   background-color: rgb(7, 86, 207);
   text-align: center;
@@ -54,7 +55,4 @@
   width: 150px;
   margin: 0 auto;
   margin-top: 40px;
-}
-#side-bar .search_btn a {
-  color: white;
 }/*# sourceMappingURL=login.css.map */

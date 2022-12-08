@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="{{ asset('css/reset.css') }} ">
     <link rel="stylesheet" href="{{ asset('css/style.css') }} ">
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/top.css') }}">
+
     <!--スマホ,タブレット対応-->
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <!--サイトのアイコン指定-->
@@ -39,9 +41,10 @@
             <div id="head-right">
                 <div id="head-right-name">
                     <p>
-                        <?php $user = Auth::user();?>{{ $user->username }}<span >さん</span>
+                        <?php $user = Auth::user(); ?>
+                        {{ $user->username }}<span >さん</span>
                         <i class="fa-solid fa-angle-down"></i>
-                        <img src="{{asset('images/icon1.png')}}">
+                        <img src="{{asset('images/'.$user->images)}}">
                     </p>
                 <div>
                 <ul class="usermenu">
