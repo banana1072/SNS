@@ -8,6 +8,7 @@
     <title></title>
     <link rel="stylesheet" href="{{ asset('css/reset.css') }} ">
     <link rel="stylesheet" href="{{ asset('css/style.css') }} ">
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
     <!--スマホ,タブレット対応-->
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <!--サイトのアイコン指定-->
@@ -21,25 +22,31 @@
     <link href="https://use.fontawesome.com/releases/v6.2.1/css/all.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
+                        <?php
+                        $user_id = Auth::id();
+                         $followed_num = DB::table('users')->join('follows','follows.followed_id' , '=', 'users.id')->where('followed_id',$user_id)->count();
+                        $following_num = DB::table('users')->join('follows', 'follows.following_id', '=', 'users.id')->where('users.id', $user_id)->count();
+                        ?>
+
 <body>
     <header>
         <div id = "head">
-        <h1>
+        <h1 class="atlas_img">
             <a href="{{url('top')}}">
-                <img src="{{ asset('images/Atlas.png')}}">
+                <img  src="{{ asset('images/Atlas.png')}}" class="top_img">
             </a>
         </h1>
             <div id="head-right">
                 <div id="head-right-name">
                     <p>
-                        <?php $user = Auth::user(); ?>{{ $user->username }}さん
+                        <?php $user = Auth::user();?>{{ $user->username }}<span >さん</span>
                         <i class="fa-solid fa-angle-down"></i>
                         <img src="{{asset('images/icon1.png')}}">
                     </p>
                 <div>
                 <ul class="usermenu">
                     <li><a href="{{url('top')}}">ホーム</a></li>
-                    <li><a href="{{url('profile')}}">プロフィール</a></li>
+                    <li><a href="{{url('profile')}}">プロフィール編集</a></li>
                     <li><a href="{{url('logout')}}">ログアウト</a></li>
                 </ul>
             </div>
@@ -51,19 +58,19 @@
         </div >
         <div id="side-bar">
             <div id="confirm">
-                <p>{{$user->username}}さんの</p>
-                <div>
-                <p>フォロー数</p>
-                <p>〇〇名</p>
+                <p class="username">{{$user->username}}さんの</p>
+                <div class="following">
+                    <p class="following_num">フォロー数</p>
+                    <p>{{ $following_num }}名</p>
                 </div>
-                <p class="btn"><a href="">フォローリスト</a></p>
-                <div>
-                <p>フォロワー数</p>
-                <p>〇〇名</p>
+                <p class="btn"><a href="{{ url('followlist') }}">フォローリスト</a></p>
+                <div class="followed">
+                    <p class="followed_num">フォロワー数</p>
+                    <p>{{ $followed_num }}名</p>
                 </div>
-                <p class="btn"><a href="">フォロワーリスト</a></p>
+                <p class="btn"><a href="{{ url('followerlist') }}">フォロワーリスト</a></p>
             </div>
-            <p class="btn"><a href="">ユーザー検索</a></p>
+            <p class="search_btn"><a href="{{ url('search') }}">ユーザー検索</a></p>
         </div>
     </div>
     <footer>

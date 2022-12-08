@@ -18,6 +18,7 @@
 
 //Auth::routes();
 
+use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
 //ログアウト中のページ
@@ -35,7 +36,11 @@ Route::post('/added', 'Auth\RegisterController@added');
 Route::get('/top','PostsController@index');
 Route::get('/home', 'HomeController@index');
 
-Route::get('/profile','UsersController@profile');
+Route::get('/followlist','UsersController@followlist');
+Route::get('/followerlist','UsersController@followerlist');
+
+
+Route::get('/profile','UsersController@Userprofile');
 
 Route::get('/search','UsersController@index');
 
