@@ -1,0 +1,1 @@
+SELECT * FROM users INNER JOIN posts ON posts.user_id = users.id WHERE users.id = 41 ORDER BY posts.created_at DESC

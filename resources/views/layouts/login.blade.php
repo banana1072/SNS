@@ -29,7 +29,6 @@
                          $followed_num = DB::table('users')->join('follows','follows.followed_id' , '=', 'users.id')->where('followed_id',$user_id)->count();
                         $following_num = DB::table('users')->join('follows', 'follows.following_id', '=', 'users.id')->where('users.id', $user_id)->count();
                         ?>
-
 <body>
     <header>
         <div id = "head">
