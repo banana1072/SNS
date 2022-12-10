@@ -12,16 +12,17 @@ use App\Post;
 class PostsController extends Controller
 {
     //
-    public function delete() {
-        $login_user_id = Auth::id();
-      }
-
-    public function update(){
-
+    public function delete($id) {
+        Post::where('id', $id)->delete();
+        return redirect('/top');
     }
 
-
-
+    public function update(Request $request){
+        $id = $request->input('id');
+        $up_post = $request->input('post_content');
+        Post::where('id', $id)->update(['post' => $up_post]);
+        return redirect('/top');
+    }
 
     public function create(Request $request){
 
@@ -36,7 +37,8 @@ class PostsController extends Controller
 
     public function index(){
         $login_user_last_post = Post::last_post();
-        return view('posts.index',['login_user_last_post'=>$login_user_last_post]);
+        $user_post = Post::post_list();
+        return view('posts.index',['login_user_last_post'=>$login_user_last_post,'user_post'=>$user_post]);
     }
 
 }

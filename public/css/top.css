@@ -44,12 +44,13 @@
   position: relative;
   left: 93%;
 }
-#container .post_contents {
-  padding-left: 100px;
+#container .post_contents .login_user_post_content {
+  border-bottom: 1px solid black;
 }
 #container .post_contents .login_user_post_content .post_content_top {
   display: flex;
   padding-top: 30px;
+  padding-left: 100px;
 }
 #container .post_contents .login_user_post_content .post_content_top img {
   margin-right: 20px;
@@ -57,16 +58,24 @@
 }
 #container .post_contents .login_user_post_content .post_content_top p {
   padding-top: 10px;
+  position: relative;
 }
 #container .post_contents .login_user_post_content .post_content {
   padding-left: 80px;
   padding-right: 500px;
   line-height: 25px;
+  position: relative;
+  left: 100px;
+  top: -20px;
 }
 #container .post_contents .login_user_post_content .fix_btn {
   width: 100px;
   position: relative;
-  left: 85%;
+  top: -10px;
+  left: 86%;
+}
+#container .post_contents .login_user_post_content .fix_btn a {
+  cursor: pointer;
 }
 #container .post_contents .login_user_post_content .fix_btn a img {
   height: 40px;
@@ -75,4 +84,69 @@
   position: relative;
   left: -10px;
   margin-right: 10px;
+}
+
+.other_user_post_content ul li {
+  border-bottom: 1px solid black;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 100px;
+  display: flex;
+}
+.other_user_post_content ul li img {
+  height: 60px;
+  margin-right: 20px;
+}
+.other_user_post_content ul li .user_content .user_post {
+  padding-top: 20px;
+  width: 800px;
+}
+.other_user_post_content ul li .fix_btn {
+  cursor: pointer;
+  position: relative;
+  top: 35px;
+}
+.other_user_post_content ul li .fix_btn a img {
+  height: 40px;
+}
+.other_user_post_content ul li .fix_btn .update_form {
+  left: 0;
+}
+
+.update_form {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  display: none;
+}
+.update_form form {
+  display: inline-block;
+  width: 200px;
+  margin: 0 auto;
+  position: relative;
+  left: 18%;
+  top: 20%;
+  background-color: white;
+  width: 700px;
+  height: 500px;
+  border-radius: 5px;
+}
+.update_form textarea {
+  display: inline-block;
+  width: 500px;
+  padding: 30px;
+  position: relative;
+  height: 280px;
+  top: 7%;
+  left: 11%;
+  margin: 0 auto;
+}
+.update_form button {
+  position: relative;
+  top: 115px;
+  height: 50px;
+  width: 50px;
 }/*# sourceMappingURL=top.css.map */

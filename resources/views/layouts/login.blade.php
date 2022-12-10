@@ -78,6 +78,8 @@
     <footer>
     </footer>
     <script src="{{ asset('js/login.js') }}"></script>
+    <script src="{{ asset('js/top.js') }}"></script>
+
     <script src="JavaScriptファイルのURL"></script>
 </body>
 </html>
