@@ -7,6 +7,10 @@
   <img src="{{ asset('images/'.$user_img) }}">
   {{ Form::open(['action' => 'PostsController@create']) }}
   {{Form::textarea('get', null, ['class' => 'post', 'id' => 'textareaRemarks', 'placeholder' => '投稿内容を入力してください', 'rows' => '3','name'=>'post_content'])}}
+  @error('post_content')
+    <div class="alert alert-danger">{{ $message }}</div>
+@enderror
+
   {{ Form::button('', ['type' => 'submit', 'class'=>'fa-regular fa-paper-plane']) }}
 </div>
 <div class="post_contents">

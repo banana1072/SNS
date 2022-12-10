@@ -11,8 +11,6 @@ class Post extends Model
     //
     public static function create($post_content){
 
-
-
         $login_user_id = Auth::id();
         DB::table('posts')->insert(['user_id'=>$login_user_id,'post'=>$post_content,'created_at'=>now(),'updated_at'=>now()]);
 
@@ -24,5 +22,14 @@ class Post extends Model
 
         return $login_user_last_post;
 
+    }
+
+    public static function last_post(){
+        $login_user_id = Auth::id();
+        $login_user_post = DB::table('users')->join('posts', 'posts.user_id', '=', 'users.id')->where('users.id', $login_user_id);
+        $login_user_last_data = $login_user_post->orderBy('posts.created_at','desc')->take(1)->get('post');
+         $login_user_last_post = ($login_user_last_data[0])->post;
+
+        return $login_user_last_post;
     }
 }
