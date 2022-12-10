@@ -62,6 +62,7 @@
         <p class="user_name">{{ $list->username }}</p>
         <p class="user_post">{{ $list->post }}</p>
       </div>
+      @if($list->user_id == Auth::user()->id)
       <div class="fix_btn">
         <a class="other_user_update">
           <img src="{{ asset('images/edit.png') }}" >
@@ -75,6 +76,7 @@
       </div>
         <a href="/top/{{ $list->id }}/delete" onclick="return confirm('こちらの投稿を削除してもよろしいでしょうか？')"><img src="{{ asset('images/trash.png') }}"></a>
       </div>
+      @endif
     </li>
     @endforeach
    </ul>

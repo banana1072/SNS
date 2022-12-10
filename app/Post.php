@@ -34,7 +34,7 @@ class Post extends Model
     }
 
     public static function post_list(){
-        $user_post = DB::table('users')->join('posts', 'posts.user_id', '=', 'users.id')->orderBy('posts.created_at','desc')->offset(2)->limit(5)->get(['username','images','post','posts.id']);
+        $user_post = DB::table('users')->join('posts', 'posts.user_id', '=', 'users.id')->orderBy('posts.created_at','desc')->offset(2)->limit(5)->get(['user_id','username','images','post','posts.id']);
 
         return $user_post;
     }
