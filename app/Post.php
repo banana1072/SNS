@@ -28,7 +28,7 @@ class Post extends Model
         $login_user_id = Auth::id();
         $login_user_post = DB::table('users')->join('posts', 'posts.user_id', '=', 'users.id')->where('users.id', $login_user_id);
         $login_user_last_data = $login_user_post->orderBy('posts.created_at','desc')->take(1)->get('post');
-         $login_user_last_post = ($login_user_last_data[0])->post;
+        $login_user_last_post = ($login_user_last_data[0])->post;
 
         return $login_user_last_post;
     }

@@ -16,6 +16,12 @@ class PostsController extends Controller
         $login_user_id = Auth::id();
       }
 
+    public function update(){
+
+    }
+
+
+
 
     public function create(Request $request){
 
@@ -25,7 +31,7 @@ class PostsController extends Controller
 
         $login_user_last_post = Post::create($post_content);
 
-        return view('posts.index',compact('login_user_last_post'));
+        return redirect('/top');
     }
 
     public function index(){

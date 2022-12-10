@@ -21,8 +21,8 @@
     </div>
     <p class="post_content">{{ $login_user_last_post}}</p>
     <div class="fix_btn">
-      {{-- <a href="{{ action('PostsController@update') }}"><img src="{{ asset('images/edit.png') }}"></a>
-      <a href="{{ action('PostsController@delete') }}"><img src="{{ asset('images/trash.png') }}"></a> --}}
+      <a href="{{ action('PostsController@update') }}"><img src="{{ asset('images/edit.png') }}"></a>
+      <a href="{{ action('PostsController@delete') }}"><img src="{{ asset('images/trash.png') }}"></a>
     </div>
 
   </div>

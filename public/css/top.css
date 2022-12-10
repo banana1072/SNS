@@ -41,6 +41,8 @@
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  position: relative;
+  left: 93%;
 }
 #container .post_contents {
   padding-left: 100px;
@@ -59,14 +61,18 @@
 #container .post_contents .login_user_post_content .post_content {
   padding-left: 80px;
   padding-right: 500px;
-  height: 200px;
   line-height: 25px;
 }
 #container .post_contents .login_user_post_content .fix_btn {
   width: 100px;
   position: relative;
-  left: 90%;
+  left: 85%;
 }
 #container .post_contents .login_user_post_content .fix_btn a img {
   height: 40px;
+}
+#container .post_contents .login_user_post_content .fix_btn a:nth-child(1) {
+  position: relative;
+  left: -10px;
+  margin-right: 10px;
 }/*# sourceMappingURL=top.css.map */
