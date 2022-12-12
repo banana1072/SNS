@@ -44,13 +44,16 @@ Route::post('/top/update','PostsController@update');
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/followlist','UsersController@followlist');
-Route::get('/followerlist','UsersController@followerlist');
+Route::get('/followlist','FollowsController@followlist');
+Route::get('/followerlist','FollowsController@followerlist');
 
 
 Route::get('/profile','UsersController@Userprofile');
 
-Route::get('/search','UsersController@index');
+Route::get('/search','FollowsController@search');
+Route::get('/search/{id}/follow', 'FollowsController@follow');
+Route::get('/search/{id}/unfollow', 'FollowsController@unfollow');
+Route::post('/search/search_result', 'FollowsController@search_result');
 
 Route::get('/follow-list','PostsController@index');
 Route::get('/follower-list','PostsController@index');

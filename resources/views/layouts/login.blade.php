@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }} ">
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
     <link rel="stylesheet" href="{{ asset('css/top.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/search.css') }}">
+
 
     <!--スマホ,タブレット対応-->
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -65,14 +67,14 @@
                     <p class="following_num">フォロー数</p>
                     <p>{{ $following_num }}名</p>
                 </div>
-                <p class="btn"><a href="{{ url('followlist') }}">フォローリスト</a></p>
+                <p class="btn"><a href="{{ action('FollowsController@followlist') }}">フォローリスト</a></p>
                 <div class="followed">
                     <p class="followed_num">フォロワー数</p>
                     <p>{{ $followed_num }}名</p>
                 </div>
-                <p class="btn"><a href="{{ url('followerlist') }}">フォロワーリスト</a></p>
+                <p class="btn"><a href="{{ action('FollowsController@followerlist') }}">フォロワーリスト</a></p>
             </div>
-            <p class="search_btn"><a href="{{ url('search') }}">ユーザー検索</a></p>
+            <p class="search_btn"><a href="{{ action('FollowsController@search') }}">ユーザー検索</a></p>
         </div>
     </div>
     <footer>

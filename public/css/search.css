@@ -1,0 +1,55 @@
+.search-wrapper {
+  padding: 70px 50px;
+  border-bottom: 10px solid rgb(233, 233, 233);
+}
+.search-wrapper input {
+  width: 25%;
+  padding: 3px 20px;
+  height: 40px;
+  font-size: 1.7rem;
+  border-color: gray;
+  border-radius: 3px;
+  outline: none;
+}
+.search-wrapper button {
+  height: 50px;
+  width: 50px;
+  border: none;
+  background-color: rgb(0, 103, 198);
+  border-radius: 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.search-wrapper button i {
+  color: white;
+  font-size: 25px;
+  margin: 0;
+}
+
+.search_user {
+  padding-left: 350px;
+}
+.search_user .users .user {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.search_user .users .user img {
+  height: 60px;
+  margin-right: 50px;
+}
+.search_user .users .user p {
+  margin-right: 200px;
+}
+.search_user .users .user a {
+  background-color: rgb(237, 56, 51);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+.search_user .users .user .follow_btn {
+  background-color: rgb(83, 172, 255);
+}/*# sourceMappingURL=search.css.map */

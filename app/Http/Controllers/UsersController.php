@@ -6,25 +6,17 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
+
 class UsersController extends Controller
 {
     //
     public function profile(){
         return view('users.profile');
     }
-    public function search(){
-        return view('users.search');
-    }
     public function logout(){
         return view('auth.login');
     }
 
-    public function followerlist(){
-        return view('follows.followerList');
-    }
-    public function followlist(){
-        return view('follows.followList');
-    }
     public function Userprofile(){
         return view('users.profile');
     }
