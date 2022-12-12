@@ -37,7 +37,7 @@ class Post extends Model
         // $user_post = DB::table('users')->join('posts', 'posts.user_id', '=', 'users.id')->join('follows', 'follows.followed_id', '=', 'users.id')->orderBy('posts.created_at', 'desc')->offset(2)->limit(5)->get(['user_id','username','images','post','posts.id']);
 
         $user_post = DB::select(
-            'SELECT images,users.id,username,posts.created_at,posts.updated_at,user_id,post FROM users INNER JOIN follows on followed_id = users.id INNER JOIN posts ON posts.user_id = followed_id WHERE following_id = ' . Auth::id() . ' UNION SELECT images,users.id,username,posts.created_at,posts.updated_at,user_id,post FROM users INNER JOIN posts ON posts.user_id = users.id WHERE users.id = ' . Auth::id() . ' ORDER BY created_at desc LIMIT 1,5');
+            'SELECT images,users.id,username,posts.created_at,posts.updated_at,user_id,post,posts.id FROM users INNER JOIN follows on followed_id = users.id INNER JOIN posts ON posts.user_id = followed_id WHERE following_id = ' . Auth::id() . ' UNION SELECT images,users.id,username,posts.created_at,posts.updated_at,user_id,post,posts.id FROM users INNER JOIN posts ON posts.user_id = users.id WHERE users.id = ' . Auth::id() . ' ORDER BY updated_at desc LIMIT 1,5');
 
         return $user_post;
     }

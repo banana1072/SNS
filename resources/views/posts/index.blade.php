@@ -63,7 +63,7 @@
         <p class="user_name">{{ $list->username }}</p>
         <p class="user_post">{{ $list->post }}</p>
       </div>
-      <span>{{date('Y-m-d H:i',strtotime($list->created_at ) )}}</span>
+      <span>{{date('Y-m-d H:i',strtotime($list->updated_at ) )}}</span>
       @if($list->user_id == Auth::user()->id)
       <div class="fix_btn">
         <a class="other_user_update">
