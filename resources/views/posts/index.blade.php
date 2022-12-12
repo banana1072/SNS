@@ -7,8 +7,8 @@
 <!--////////////////////投稿updateモーダル////////////////////-->
 <div class="update_form" id="login_user_update">
   {{ Form::open(['url'=> '/top/update'])  }}
-  {{Form::textarea('get', $login_user_last_post[0]->post, ['class' => 'update_post', 'id' => 'textareaRemarks', 'placeholder' =>'更新する内容を記入してください'  , 'rows' => '3','name'=>'post_content'])}}
-  {{ Form::button('', ['type' => 'image', 'src' => asset('images/edit.png') ]) }}
+  {{Form::textarea('get', $login_user_last_post[0]->post, ['class' => 'update_post', 'id' => 'textareaRemarks', 'placeholder' =>'更新する内容を記入してください'  , 'rows' => '3','name'=>'up_content'])}}
+  <button type="submit"><img src="{{ asset('images/edit.png') }}"></button>
   {{ Form::hidden('id',$login_user_last_post[0]->id) }}
   {{ Form::close() }}
 </div>
@@ -46,6 +46,7 @@
       <a class="login_user_update"><img src="{{ asset('images/edit.png') }}" ></a>
       <a href="/top/{{ $login_user_last_post[0]->id }}/delete"><img src="{{ asset('images/trash.png') }}" onclick="return confirm('こちらの投稿を削除してもよろしいでしょうか？')"></a>
     </div>
+
   </div>
 
 <!--////////////////////////////////////////////////////-->
@@ -71,8 +72,8 @@
         </a>
         <div class="update_form other">
         {{ Form::open(['url'=>'/top/update'])  }}
-        {{Form::textarea('get', $list->post, ['class' => 'update_post', 'placeholder' =>'更新する内容を記入してください'  , 'rows' => '3','name'=>'post_content'])}}
-        {{ Form::button('', ['type' => 'image', 'src' => asset('images/edit.png') ]) }}
+        {{Form::textarea('get', $list->post, ['class' => 'update_post', 'placeholder' =>'更新する内容を記入してください'  , 'rows' => '3','name'=>'up_content'])}}
+        <button type="submit"><img src="{{ asset('images/edit.png') }}"></button>
         {{ Form::hidden('id',$list->id) }}
         {{ Form::close() }}
       </div>
@@ -84,4 +85,5 @@
    </ul>
   </div>
 </div>
+
 @endsection

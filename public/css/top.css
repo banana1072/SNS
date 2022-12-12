@@ -132,6 +132,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 10;
   display: none;
+  cursor: default;
 }
 .update_form form {
   display: inline-block;
@@ -156,8 +157,14 @@
   margin: 0 auto;
 }
 .update_form button {
+  background-color: white;
+  border: none;
   position: relative;
   top: 115px;
   height: 50px;
   width: 50px;
+  cursor: pointer;
+}
+.update_form button img {
+  height: 50px;
 }/*# sourceMappingURL=top.css.map */

@@ -19,14 +19,16 @@ class PostsController extends Controller
 
     public function update(Request $request){
         $id = $request->input('id');
-        $up_post = $request->input('post_content');
+        $up_post = $request->input('up_content');
+        $request->validate(['up_content' => 'required|max:150'],[]
+    );
         Post::where('id', $id)->update(['post' => $up_post]);
         return redirect('/top');
     }
 
     public function create(Request $request){
 
-        $request->validate(['post_content' => 'required|max:200']);
+        $request->validate(['post_content' => 'required|max:150']);
 
         $post_content = $request->get('post_content');
 
