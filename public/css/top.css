@@ -68,6 +68,11 @@
   left: 100px;
   top: -20px;
 }
+#container .post_contents .login_user_post_content span {
+  position: relative;
+  left: 83%;
+  top: -71px;
+}
 #container .post_contents .login_user_post_content .fix_btn {
   width: 100px;
   position: relative;
@@ -92,6 +97,7 @@
   padding-bottom: 30px;
   padding-left: 100px;
   display: flex;
+  position: relative;
 }
 .other_user_post_content ul li img {
   height: 60px;
@@ -100,6 +106,11 @@
 .other_user_post_content ul li .user_content .user_post {
   padding-top: 20px;
   width: 800px;
+}
+.other_user_post_content ul li span {
+  position: absolute;
+  left: 83%;
+  top: 30px;
 }
 .other_user_post_content ul li .fix_btn {
   cursor: pointer;

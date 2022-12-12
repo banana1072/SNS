@@ -14,9 +14,9 @@ class FollowsTableSeeder extends Seeder
 
     public function run()
     {
-        for ($i = 1; $i <= 10; $i++) {
+        for ($i = 1; $i <= 3; $i++) {
             DB::table('follows')->insert([
-                ['following_id' => $i, 'followed_id' => 41]
+                ['following_id' => 41, 'followed_id' => $i]
             ]);
         }
     }

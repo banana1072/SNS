@@ -15,7 +15,6 @@ class DatabaseSeeder extends Seeder
             [
                 // UsersTableSeeder::class,
                 FollowsTableSeeder::class,
-                PostsTableSee::class,
             ]
         );
     }

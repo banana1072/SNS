@@ -41,6 +41,7 @@
       <p>{{ $user_name }}</p>
     </div>
     <p class="post_content">{{ $login_user_last_post[0]->post }}</p>
+    <span>{{ date('Y-m-d H:i',strtotime($login_user_last_post[0]->created_at ) ) }}</span>
     <div class="fix_btn">
       <a class="login_user_update"><img src="{{ asset('images/edit.png') }}" ></a>
       <a href="/top/{{ $login_user_last_post[0]->id }}/delete"><img src="{{ asset('images/trash.png') }}" onclick="return confirm('こちらの投稿を削除してもよろしいでしょうか？')"></a>
@@ -62,6 +63,7 @@
         <p class="user_name">{{ $list->username }}</p>
         <p class="user_post">{{ $list->post }}</p>
       </div>
+      <span>{{date('Y-m-d H:i',strtotime($list->created_at ) )}}</span>
       @if($list->user_id == Auth::user()->id)
       <div class="fix_btn">
         <a class="other_user_update">

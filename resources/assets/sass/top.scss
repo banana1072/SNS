@@ -61,6 +61,11 @@
                 left: 100px;
                 top: -20px;
             }
+            span {
+                position: relative;
+                left: 83%;
+                top: -71px;
+            }
             .fix_btn {
                 width: 100px;
                 position: relative;
@@ -90,6 +95,7 @@
             padding-bottom: 30px;
             padding-left: 100px;
             display: flex;
+            position: relative;
             img {
                 height: 60px;
                 margin-right: 20px;
@@ -99,6 +105,11 @@
                     padding-top: 20px;
                     width: 800px;
                 }
+            }
+            span {
+                position: absolute;
+                left: 83%;
+                top: 30px;
             }
             .fix_btn {
                 cursor: pointer;
