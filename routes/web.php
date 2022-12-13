@@ -53,7 +53,6 @@ Route::get('/profile','UsersController@Userprofile');
 Route::get('/search','FollowsController@search');
 Route::get('/search/{id}/follow', 'FollowsController@follow');
 Route::get('/search/{id}/unfollow', 'FollowsController@unfollow');
-Route::post('/search/search_result', 'FollowsController@search_result');
 
 Route::get('/follow-list','PostsController@index');
 Route::get('/follower-list','PostsController@index');

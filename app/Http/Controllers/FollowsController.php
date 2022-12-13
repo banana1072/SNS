@@ -21,17 +21,19 @@ class FollowsController extends Controller
         return view('follows.followerList');
     }
 
-    public function search(){
+    public function search(Request $request){
         $other_user_list = Follow::other_user_list();
         $follow_list = Follow::follow_list();
-        return view('follows.search',['other_user_list'=>$other_user_list,'follow_list'=>$follow_list]);
-    }
-    public function search_result(Request $request){
-        $search_word = $request->input('search_word');
-        $search_result = User::where('username',"LIKE", '%'.$search_word.'%')->get(['id','images','username']);
-        return view("follows.search",['$search_result'=>$search_result]);
-    }
 
+        $search_word = $request->input('search_word');
+        $query = User::query();
+        if(!empty($search_word)){
+            $query->where('username',"LIKE", '%'.$search_word.'%');
+        }
+        $search_result = $query->get(['id','images','username']);
+
+        return view('follows.search',['other_user_list'=>$other_user_list,'follow_list'=>$follow_list,'search_result'=> $search_result]);
+    }
     public function follow($id){
         $login_user_id = Auth::id();
         Follow::create(['followed_id' => $id,'following_id' => $login_user_id,'created_at'=>now(),'updated_at'=>now()]);
