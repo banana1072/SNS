@@ -1,0 +1,53 @@
+.other_user_profile_wrapper {
+  display: flex;
+  padding: 40px 80px;
+  border-bottom: 10px solid rgb(233, 233, 233);
+  align-items: center;
+}
+.other_user_profile_wrapper img {
+  height: 60px;
+}
+.other_user_profile_wrapper .other_user_profile {
+  margin-left: 30px;
+}
+.other_user_profile_wrapper .other_user_profile ul li {
+  display: flex;
+  margin-top: 30px;
+}
+.other_user_profile_wrapper .other_user_profile ul li p {
+  width: 200px;
+}
+.other_user_profile_wrapper a {
+  background-color: rgb(237, 56, 51);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  position: relative;
+  left: 400px;
+  top: 30px;
+}
+.other_user_profile_wrapper .follow_btn {
+  background-color: rgb(83, 172, 255);
+}
+
+.other_user_posts ul li {
+  display: flex;
+  border-bottom: 1px solid black;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 100px;
+  position: relative;
+}
+.other_user_posts ul li img {
+  height: 60px;
+  margin-right: 20px;
+}
+.other_user_posts ul li .other_user_post {
+  width: 800px;
+}
+.other_user_posts ul li .other_user_post p {
+  margin-top: 20px;
+}
+.other_user_posts ul li .post_updated {
+  margin-top: 20px;
+}/*# sourceMappingURL=other_user_profile.css.map */

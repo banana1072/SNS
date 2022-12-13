@@ -1,0 +1,32 @@
+.followlist_wrapper {
+  display: flex;
+  padding: 40px 80px;
+  border-bottom: 10px solid rgb(233, 233, 233);
+  align-items: center;
+}
+.followlist_wrapper p {
+  margin-right: 50px;
+  font-size: 1.5rem;
+}
+.followlist_wrapper .follow_list img {
+  height: 60px;
+}
+
+.follow_posts .follow_post {
+  border-bottom: 1px solid black;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 100px;
+  display: flex;
+  position: relative;
+}
+.follow_posts .follow_post img {
+  height: 60px;
+  margin-right: 20px;
+}
+.follow_posts .follow_post .follow_detail {
+  width: 800px;
+}
+.follow_posts .follow_post .follow_detail .follow_user_post {
+  margin-top: 20px;
+}/*# sourceMappingURL=followlist.css.map */

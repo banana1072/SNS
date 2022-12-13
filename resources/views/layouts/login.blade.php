@@ -11,6 +11,14 @@
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
     <link rel="stylesheet" href="{{ asset('css/top.css') }}">
     <link rel="stylesheet" href="{{ asset('css/search.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/followlist.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/followlist.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
+
+        <link rel="stylesheet" href="{{ asset('css/followerlist.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('css/other_user_profile.css') }}">
+
 
 
     <!--スマホ,タブレット対応-->
@@ -45,7 +53,7 @@
                         <?php $user = Auth::user(); ?>
                         {{ $user->username }}<span >さん</span>
                         <i class="fa-solid fa-angle-down"></i>
-                        <img src="{{asset('images/'.$user->images)}}">
+                        <img class="top-head-icon" src="{{asset('images/'.$user->images)}}">
                     </p>
                 <div>
                 <ul class="usermenu">

@@ -1,0 +1,32 @@
+.followerlist_wrapper {
+  display: flex;
+  padding: 40px 80px;
+  border-bottom: 10px solid rgb(233, 233, 233);
+  align-items: center;
+}
+.followerlist_wrapper p {
+  margin-right: 50px;
+  font-size: 1.5rem;
+}
+.followerlist_wrapper .follower_list img {
+  height: 60px;
+}
+
+.follower_posts .follower_post {
+  border-bottom: 1px solid black;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 100px;
+  display: flex;
+  position: relative;
+}
+.follower_posts .follower_post img {
+  height: 60px;
+  margin-right: 20px;
+}
+.follower_posts .follower_post .follower_detail {
+  width: 800px;
+}
+.follower_posts .follower_post .follower_detail .follower_user_post {
+  margin-top: 20px;
+}/*# sourceMappingURL=follower.css.map */

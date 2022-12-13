@@ -48,7 +48,14 @@ Route::get('/followlist','FollowsController@followlist');
 Route::get('/followerlist','FollowsController@followerlist');
 
 
-Route::get('/profile','UsersController@Userprofile');
+Route::get('/profile','UsersController@profile');
+Route::post('/profile/profile_edit','UsersController@profileEdit');
+
+
+Route::get('/followlist/{id}/user','UsersController@other_user_profile');
+Route::get('/followerlist/{id}/user','UsersController@other_user_profile');
+
+
 
 Route::get('/search','FollowsController@search');
 Route::get('/search/{id}/follow', 'FollowsController@follow');

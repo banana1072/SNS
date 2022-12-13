@@ -1,0 +1,59 @@
+.other_user_profile_wrapper {
+    display: flex;
+    padding: 40px 80px;
+    border-bottom: 10px solid rgba(233, 233, 233);
+    align-items: center;
+    img {
+        height: 60px;
+    }
+    .other_user_profile {
+        margin-left: 30px;
+        ul {
+            li {
+                display: flex;
+                margin-top: 30px;
+                p {
+                    width: 200px;
+                }
+            }
+        }
+    }
+    a {
+        background-color: rgb(237, 56, 51);
+        color: white;
+        padding: 15px 20px;
+        border-radius: 10px;
+        position: relative;
+        left: 400px;
+        top: 30px
+    }
+    .follow_btn {
+        background-color: rgb(83, 172, 255);
+    }
+}
+
+.other_user_posts {
+    ul {
+        li {
+            display: flex;
+            border-bottom: 1px solid black;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 100px;
+            position: relative;
+            img {
+                height: 60px;
+                margin-right: 20px;
+            }
+            .other_user_post {
+                width: 800px;
+                p {
+                    margin-top: 20px;
+                }
+            }
+            .post_updated {
+                margin-top: 20px;
+            }
+        }
+    }
+}
