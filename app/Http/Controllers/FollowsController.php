@@ -32,7 +32,7 @@ class FollowsController extends Controller
         }
         $search_result = $query->get(['id','images','username']);
 
-        return view('follows.search',['other_user_list'=>$other_user_list,'follow_list'=>$follow_list,'search_result'=> $search_result]);
+        return view('follows.search',['other_user_list'=>$other_user_list,'follow_list'=>$follow_list,'search_result'=> $search_result,'search_word'=>$search_word]);
     }
     public function follow($id){
         $login_user_id = Auth::id();

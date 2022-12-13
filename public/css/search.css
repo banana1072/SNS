@@ -1,9 +1,14 @@
 .search-wrapper {
   padding: 70px 50px;
   border-bottom: 10px solid rgb(233, 233, 233);
+  display: flex;
+  align-items: center;
 }
-.search-wrapper input {
-  width: 25%;
+.search-wrapper form {
+  margin-right: 100px;
+}
+.search-wrapper form input {
+  width: 70%;
   padding: 3px 20px;
   height: 40px;
   font-size: 1.7rem;
@@ -11,7 +16,7 @@
   border-radius: 3px;
   outline: none;
 }
-.search-wrapper button {
+.search-wrapper form button {
   height: 50px;
   width: 50px;
   border: none;
@@ -21,10 +26,13 @@
   -moz-appearance: none;
   appearance: none;
 }
-.search-wrapper button i {
+.search-wrapper form button i {
   color: white;
   font-size: 25px;
   margin: 0;
+}
+.search-wrapper p {
+  font-size: 1.5rem;
 }
 
 .search_user {

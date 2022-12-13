@@ -5,6 +5,9 @@
   {{ Form::text('get','',['class'=>'search_user','name'=>'search_word','placeholder'=>'ユーザ名']) }}
   <button><i class="fa-solid fa-magnifying-glass"></i></button>
   {{ Form::close() }}
+  @if(!empty($search_word))
+  <p>検索ワード：{{ $search_word }}</p>
+  @endif
 </div>
 <div class="search_user">
   <ul class="users">
