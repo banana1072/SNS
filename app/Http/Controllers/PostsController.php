@@ -28,7 +28,7 @@ class PostsController extends Controller
 
     public function create(Request $request){
 
-        $request->validate(['post_content' => 'required|max:150']);
+        $request->validate(['post_content' => 'required|min:1|max:150']);
 
         $post_content = $request->get('post_content');
 

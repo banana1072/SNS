@@ -11,6 +11,10 @@
             top: -10px;
         }
         form {
+            .alert {
+                position: absolute;
+                color: red;
+            }
             textarea {
                 width: 850px;
                 border: none;
@@ -34,7 +38,7 @@
             border-radius: 3px;
             cursor: pointer;
             position: relative;
-            left: 93%;
+            left: 10%;
         }
     }
     .post_contents {
@@ -60,6 +64,11 @@
                 position: relative;
                 left: 100px;
                 top: -20px;
+            }
+            .alert {
+                position: absolute;
+                color: red;
+                left: 178px;
             }
             span {
                 position: relative;
@@ -115,6 +124,7 @@
                 cursor: pointer;
                 position: relative;
                 top: 35px;
+                left: 166px;
                 a {
                     img {
                         height: 40px;

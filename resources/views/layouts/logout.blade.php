@@ -8,6 +8,10 @@
   <title></title>
   <link rel="stylesheet" href="{{ asset('css/reset.css') }} ">
   <link rel="stylesheet" href="{{ asset('css/logout.css') }} ">
+  <link rel="stylesheet" href="{{ asset('css/out_login.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/out_register.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/out_added.css') }}">
+
   <!--スマホ,タブレット対応-->
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <!--サイトのアイコン指定-->

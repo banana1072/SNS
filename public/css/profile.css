@@ -15,6 +15,10 @@
 .profile_edit_wrapper form div {
   margin-top: 30px;
 }
+.profile_edit_wrapper form div p {
+  margin-top: 15px;
+  color: red;
+}
 .profile_edit_wrapper form div label {
   display: inline-block;
   width: 200px;

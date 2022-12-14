@@ -5,13 +5,17 @@
 <?php $user_name = Auth::user()->username ?>
 
 <!--////////////////////投稿updateモーダル////////////////////-->
+@if($login_user_last_post->count() == 0)
+@else
 <div class="update_form" id="login_user_update">
   {{ Form::open(['url'=> '/top/update'])  }}
   {{Form::textarea('get', $login_user_last_post[0]->post, ['class' => 'update_post', 'id' => 'textareaRemarks', 'placeholder' =>'更新する内容を記入してください'  , 'rows' => '3','name'=>'up_content'])}}
   <button type="submit"><img src="{{ asset('images/edit.png') }}"></button>
   {{ Form::hidden('id',$login_user_last_post[0]->id) }}
   {{ Form::close() }}
-</div>
+  </div>
+
+@endif
 <!--////////////////////////////////////////////////////-->
 
 <!--///////////////////呟き画面updateモーダル//////////////-->
@@ -33,7 +37,8 @@
 
 
 <!--////////////////////////投稿した内容////////////////////////////-->
-
+@if($login_user_last_post->count() == 0)
+@else
 <div class="post_contents">
   <div class="login_user_post_content">
     <div class="post_content_top">
@@ -41,21 +46,23 @@
       <p>{{ $user_name }}</p>
     </div>
     <p class="post_content">{{ $login_user_last_post[0]->post }}</p>
+    @error('up_content')
+      <div class="alert alert-danger">{{ $message }}</div>
+    @enderror
     <span>{{ date('Y-m-d H:i',strtotime($login_user_last_post[0]->created_at ) ) }}</span>
     <div class="fix_btn">
       <a class="login_user_update"><img src="{{ asset('images/edit.png') }}" ></a>
       <a href="/top/{{ $login_user_last_post[0]->id }}/delete"><img src="{{ asset('images/trash.png') }}" onclick="return confirm('こちらの投稿を削除してもよろしいでしょうか？')"></a>
     </div>
-
   </div>
+</div>
+@endif
 
 <!--////////////////////////////////////////////////////-->
 
 <!--//////////////////////他の人の投稿//////////////////////////////-->
 
-  <div class="other_user_post_content">
-
-
+<div class="other_user_post_content">
    <ul>
     @foreach ($user_post as $list)
     <li class="user_contents">
@@ -83,7 +90,6 @@
     </li>
     @endforeach
    </ul>
-  </div>
-</div>
+ </div>
 
 @endsection

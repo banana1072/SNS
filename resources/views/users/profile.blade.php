@@ -24,7 +24,7 @@
   <div >
   {{Form::label('name','password')}}
   {{ Form::password('password',[]) }}
-      @if ($errors->has('password'))
+    @if ($errors->has('password'))
     <p>{{ $errors->first('password') }}</p>
     @endif
 

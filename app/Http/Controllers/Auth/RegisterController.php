@@ -80,10 +80,10 @@ class RegisterController extends Controller
             $data = $request->input();
 
             $rulus = [
-                'username' => 'required|string|max:255',
-                'mail' => 'required|string|email|max:255|unique:users',
-                'password' => 'required|string|min:4|confirmed',
-                'password_confirmation' => 'required'
+                'username' => 'required|string|min:2|max:12',
+                'mail' => 'required|string|email|min:5|max:40|unique:users',
+                'password' => 'required|string|min:8|max:20|confirmed',
+                'password_confirmation' => 'required|min:8|max:20|'
             ];
 
             $message = [

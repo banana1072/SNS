@@ -11,6 +11,10 @@
         flex-direction: column;
         align-items: center;
         div {
+            p {
+                margin-top: 15px;
+                color: red;
+            }
             margin-top: 30px;
             label {
                 display: inline-block;

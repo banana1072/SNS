@@ -1,10 +1,31 @@
 @charset "UTF-8";
-
-html{
+html {
     height: 100%;
 }
 
-body{
+body {
     height: 100%;
-    background: #186AC9;
+    background: linear-gradient(to bottom, rgb(1, 104, 199), rgb(250, 225, 50));
+}
+
+header {
+    padding-top: 200px;
+}
+
+header h1 {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header p {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-size: 1.8rem;
+}
+
+header h1 img {
+    height: 60px;
 }

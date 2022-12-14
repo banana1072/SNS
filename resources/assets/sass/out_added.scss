@@ -1,0 +1,39 @@
+#clear {
+    color: white;
+    width: 360px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 30px;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 360px;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    margin-top: 30px;
+    border-radius: 48px;
+    p {
+        line-height: 28px;
+    }
+    .btn {
+        width: 150px;
+        height: 40px;
+        padding: 1px 3px;
+        border: none;
+        background-color: rgb(237, 59, 80);
+        color: white;
+        margin-top: 30px;
+        position: relative;
+        left: 60px;
+        border-radius: 10px;
+        position: relative;
+        left: 130px;
+        cursor: pointer;
+        a {
+            position: relative;
+            top: 6px;
+        }
+    }
+    p:nth-child(3) {
+        margin-top: 30px;
+    }
+}

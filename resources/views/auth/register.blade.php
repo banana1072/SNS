@@ -2,27 +2,30 @@
 
 @section('content')
 
+<div class="register_form">
 {!! Form::open(['action' => 'Auth\RegisterController@register']) !!}
 
 <h2>新規ユーザー登録</h2>
 
-{{ Form::label('ユーザー名') }}
+{{ Form::label('username') }}
 {{ Form::text('username',null,['class' => 'input']) }}
 
-{{ Form::label('メールアドレス') }}
+{{ Form::label('E-mail','',['class'=>'mail-label']) }}
 {{ Form::text('mail',null,['class' => 'input']) }}
 
-{{ Form::label('パスワード') }}
-{{ Form::text('password',null,['class' => 'input']) }}
+{{ Form::label('password') }}
+{{ Form::password('password', ['class'=>'input']) }}
 
-{{ Form::label('パスワード確認') }}
-{{ Form::text('password_confirmation',null,['class' => 'input']) }}
+{{ Form::label('password_confirm','',['class'=>"password_confirm"]) }}
+{{ Form::password('password_confirmation',null,['class' => 'input','type'=>'password']) }}
 
-{{ Form::submit('登録') }}
+{{ Form::submit('登録',['class'=>'submit']) }}
 
-<p><a href="/login">ログイン画面へ戻る</a></p>
+<p class="register-btn"><a href="/login">ログイン画面へ戻る</a></p>
 
 {!! Form::close() !!}
+
+</div>
 
 @foreach ($errors->all() as $error)
   <li>{{$error}}</li>

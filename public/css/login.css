@@ -1,62 +1,82 @@
-#head-right-name p {
-  color: white;
-  font-size: 1.3rem;
-}
-#head-right-name p span {
-  display: inline-block;
-  margin-left: 30px;
-}
-#head-right-name p i {
-  transform: rotate(0);
-}
-#head-right-name p i.rotate {
-  transform: rotate(180deg);
-}
+    #container {
+        position: relative;
+        left: 1px;
+    }
 
-#side-bar #confirm {
-  padding: 20px 0 40px 20px;
-  border-bottom: 1px solid black;
-}
-#side-bar #confirm .username {
-  margin-bottom: 30px;
-}
-#side-bar #confirm .following {
-  display: flex;
-  margin-bottom: 30px;
-}
-#side-bar #confirm .following .following_num {
-  margin-right: 30px;
-}
-#side-bar #confirm .followed {
-  display: flex;
-  margin: 30px 0;
-}
-#side-bar #confirm .followed .followed_num {
-  margin-right: 30px;
-}
-#side-bar #confirm .btn a {
-  color: white;
-  display: block;
-  padding: 15px 25px;
-  background-color: rgb(7, 86, 207);
-  text-align: center;
-  border-radius: 8px;
-  width: 150px;
-  position: relative;
-  left: 40px;
-}
-#side-bar .search_btn a {
-  color: white;
-  display: block;
-  padding: 15px 25px;
-  background-color: rgb(7, 86, 207);
-  text-align: center;
-  border-radius: 8px;
-  width: 150px;
-  margin: 0 auto;
-  margin-top: 40px;
-}
+    #head-right-name p {
+        color: white;
+        font-size: 1.3rem;
+    }
 
-.top-head-icon {
-  height: 60px;
-}/*# sourceMappingURL=login.css.map */
+    #head-right-name p span {
+        display: inline-block;
+        margin-left: 30px;
+    }
+
+    #head-right-name p i {
+        transform: rotate(0);
+    }
+
+    #head-right-name p i.rotate {
+        transform: rotate(180deg);
+    }
+
+    #side-bar #confirm {
+        padding: 20px 0 40px 20px;
+        border-bottom: 1px solid black;
+    }
+
+    #side-bar #confirm .username {
+        margin-bottom: 30px;
+    }
+
+    #side-bar #confirm .following {
+        display: flex;
+        margin-bottom: 30px;
+    }
+
+    #side-bar #confirm .following .following_num {
+        margin-right: 30px;
+    }
+
+    #side-bar #confirm .followed {
+        display: flex;
+        margin: 30px 0;
+    }
+
+    #side-bar #confirm .followed .followed_num {
+        margin-right: 30px;
+    }
+
+    #side-bar #confirm .btn a {
+        color: white;
+        display: block;
+        padding: 15px 25px;
+        background-color: rgb(7, 86, 207);
+        text-align: center;
+        border-radius: 8px;
+        width: 150px;
+        position: relative;
+        left: 40px;
+    }
+
+    #side-bar .search_btn a {
+        color: white;
+        display: block;
+        padding: 15px 25px;
+        background-color: rgb(7, 86, 207);
+        text-align: center;
+        border-radius: 8px;
+        width: 150px;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+    #side-bar {
+        height: 88vh;
+    }
+
+    .top-head-icon {
+        height: 60px;
+    }
+    /*# sourceMappingURL=login.css.map */

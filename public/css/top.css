@@ -12,6 +12,10 @@
   position: relative;
   top: -10px;
 }
+#container .post_form form .alert {
+  position: absolute;
+  color: red;
+}
 #container .post_form form textarea {
   width: 850px;
   border: none;
@@ -42,7 +46,7 @@
   border-radius: 3px;
   cursor: pointer;
   position: relative;
-  left: 93%;
+  left: 10%;
 }
 #container .post_contents .login_user_post_content {
   border-bottom: 1px solid black;
@@ -67,6 +71,11 @@
   position: relative;
   left: 100px;
   top: -20px;
+}
+#container .post_contents .login_user_post_content .alert {
+  position: absolute;
+  color: red;
+  left: 178px;
 }
 #container .post_contents .login_user_post_content span {
   position: relative;
@@ -116,6 +125,7 @@
   cursor: pointer;
   position: relative;
   top: 35px;
+  left: 166px;
 }
 .other_user_post_content ul li .fix_btn a img {
   height: 40px;
