@@ -24,14 +24,6 @@
   outline: none;
   resize: none;
 }
-#container .post_form form textarea::-moz-placeholder {
-  color: rgb(233, 233, 233);
-  font-weight: inherit;
-}
-#container .post_form form textarea:-ms-input-placeholder {
-  color: rgb(233, 233, 233);
-  font-weight: inherit;
-}
 #container .post_form form textarea::placeholder {
   color: rgb(233, 233, 233);
   font-weight: inherit;
@@ -46,7 +38,7 @@
   border-radius: 3px;
   cursor: pointer;
   position: relative;
-  left: 10%;
+  left: 90%;
 }
 #container .post_contents .login_user_post_content {
   border-bottom: 1px solid black;
@@ -125,7 +117,6 @@
   cursor: pointer;
   position: relative;
   top: 35px;
-  left: 166px;
 }
 .other_user_post_content ul li .fix_btn a img {
   height: 40px;

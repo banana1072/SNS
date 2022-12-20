@@ -21,7 +21,8 @@ class Follow extends Model
     }
      public static function other_user_post(){
 
-        $other_user_list = DB::select('select users.id,images,username,post,posts.updated_at from users inner join posts on posts.user_id = users.id where users.id != '.Auth::id());
+        $user_id = Auth::id();
+        $other_user_list = DB::select('select users.id,images,username,post,posts.updated_at from users inner join posts on posts.user_id = users.id where users.id != '.$user_id);
         return $other_user_list;
     }
 

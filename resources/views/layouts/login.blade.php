@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="{{ asset('css/other_user_profile.css') }}">
 
 
-
     <!--スマホ,タブレット対応-->
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <!--サイトのアイコン指定-->
@@ -42,11 +41,11 @@
 <body>
     <header>
         <div id = "head">
-        <h1 class="atlas_img">
-            <a href="{{url('top')}}">
-                <img  src="{{ asset('images/Atlas.png')}}" class="top_img">
-            </a>
-        </h1>
+            <h1 class="atlas_img">
+                <a href="{{url('top')}}">
+                    <img  src="{{ asset('images/Atlas.png')}}" class="top_img">
+                </a>
+            </h1>
             <div id="head-right">
                 <div id="head-right-name">
                     <p>
@@ -55,7 +54,7 @@
                         <i class="fa-solid fa-angle-down"></i>
                         <img class="top-head-icon" src="{{asset('images/'.$user->images)}}">
                     </p>
-                <div>
+                </div>
                 <ul class="usermenu">
                     <li><a href="{{url('top')}}">ホーム</a></li>
                     <li><a href="{{url('profile')}}">プロフィール編集</a></li>

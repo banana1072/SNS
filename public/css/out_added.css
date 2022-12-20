@@ -33,6 +33,7 @@
 #clear .btn a {
   position: relative;
   top: 6px;
+  color: white;
 }
 #clear p:nth-child(3) {
   margin-top: 30px;

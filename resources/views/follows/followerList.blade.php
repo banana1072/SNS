@@ -6,7 +6,9 @@
   <div class="follower_list">
     @foreach($other_user_list as $list)
       @if($follower_list->contains("following_id",$list->id))
+      <a href="/followerlist/{{ $list->id }}/user">
         <img src="{{ asset('images/'.$list->images) }}">
+      </a>
       @endif
     @endforeach
   </div>

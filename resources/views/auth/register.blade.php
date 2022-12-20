@@ -7,6 +7,16 @@
 
 <h2>新規ユーザー登録</h2>
 
+<ul class="error">
+  @foreach ($errors->all() as $error)
+
+    <li>{{$error}}</li>
+
+    @endforeach
+
+</ul>
+
+
 {{ Form::label('username') }}
 {{ Form::text('username',null,['class' => 'input']) }}
 
@@ -27,9 +37,6 @@
 
 </div>
 
-@foreach ($errors->all() as $error)
-  <li>{{$error}}</li>
-@endforeach
 
 
 @endsection

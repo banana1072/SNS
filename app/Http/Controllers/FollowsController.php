@@ -37,7 +37,7 @@ class FollowsController extends Controller
         if(!empty($search_word)){
             $query->where('username',"LIKE", '%'.$search_word.'%');
         }
-        $search_result = $query->get(['id','images','username']);
+        $search_result = $query->where('users.id','!=',Auth::id())->get(['id','images','username']);
 
         return view('follows.search',['other_user_list'=>$other_user_list,'follow_list'=>$follow_list,'search_result'=> $search_result,'search_word'=>$search_word]);
     }

@@ -1,11 +1,19 @@
 .register_form {
   background-color: rgba(0, 0, 0, 0.3);
-  width: 360px;
+  width: 400px;
   margin: 0 auto;
   padding-top: 60px;
   padding-bottom: 30px;
   margin-top: 30px;
   border-radius: 48px;
+}
+.register_form .error {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.register_form .error li {
+  color: rgb(237, 59, 80);
+  margin-top: 10px;
 }
 .register_form form {
   display: flex;
@@ -56,4 +64,7 @@
 }
 .register_form form .register-btn {
   margin-top: 20px;
+}
+.register_form form .register-btn a {
+  color: white;
 }/*# sourceMappingURL=out_register.css.map */

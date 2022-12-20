@@ -54,4 +54,7 @@
 }
 .login_form form .register-btn {
   margin-top: 20px;
+}
+.login_form form .register-btn a {
+  color: white;
 }/*# sourceMappingURL=out_login.css.map */
