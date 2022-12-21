@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Follow;
+use Illuminate\Validation\Rule;
 use App\User;
 use Illuminate\Validation\Validator;
 
@@ -26,11 +27,11 @@ class UsersController extends Controller
     }
     $request->file('icon');
 
+
     $request->validate([
         'username'=>'required|min:2|max:12',
-        'mail' => 'required|email:rfc,dns|min:5|max:40|unique:users,mail',
-        'password' =>'required|alpha|min:8|max:20',
-        'password_confirmation'=>'required|alpha|min:8|max:20',
+        'mail' => ['required','email:rfc,dns','min:5','max:40',Rule::unique('users')->ignore($request->mail, 'mail')],
+        'password' =>'required|alpha|min:8|max:20|confirmed',
         'bio'=>'max:150',
         'icon'=>'mimes:jpeg,jpg,png,bmp,gif,svg'
     ]);
